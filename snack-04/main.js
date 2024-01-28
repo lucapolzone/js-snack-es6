@@ -49,11 +49,12 @@ const arrayFouls = teams.map((team) => {
 //const {name, foul, score} = team;
   const {name, foul} = team;
 //return {name, foul, score};
-  return {name, foul};
+  return `<h2>Il ${name} ha fatto ${foul} falli</h2>`;
 })
 
-console.log(arrayFouls);
+console.log(arrayFouls); 
 
+containerElement.innerHTML = arrayFouls.join('');
 
 
 function getRandomNumber(min, max) {
